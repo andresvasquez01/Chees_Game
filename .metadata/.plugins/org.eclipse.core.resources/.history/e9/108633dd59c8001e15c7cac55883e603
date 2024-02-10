@@ -1,0 +1,46 @@
+package piece;
+
+import main.GamePanel;
+
+public class Pawn extends Piece {
+
+	public Pawn(int color, int col, int row) {
+		super(color, col, row);
+		
+		if (color == GamePanel.WHITE) {
+			image = getImage("/piece/w-pawn");
+		}
+		else {
+			image = getImage("/piece/b-pawn");
+		}
+	}
+	
+	@Override
+	public boolean canMove(int targetCol, int targetRow) {
+		
+		if(isWithinBoard(targetCol, targetRow) && isSameSquare(targetCol, targetRow) == false) {
+			// Color move
+			int moveValue;
+			if(color == GamePanel.WHITE) {
+				moveValue = -1;
+			}
+			else {
+				moveValue = 1;
+			}
+			
+			//Hitting piece
+			hittingP = getHittingP(targetCol, targetRow);
+			
+			//1 rule movement
+			if(targetCol == preCol && targetRow == + moveValue && hittingP == null) {
+				return true;
+			}
+			//2 rule movement
+			
+			
+		}
+		
+		return false;
+	}
+
+}

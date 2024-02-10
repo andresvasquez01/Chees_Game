@@ -1,0 +1,19 @@
+package main;
+
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.JPanel;
+
+public class GamePanel extends JPanel {
+	
+	public static final int Width = 1100;
+	public static final int Height = 1100; 
+		
+	public GamePanel() {
+		
+		setPreferredSize(new Dimension(Width,Height));
+		setBackground(Color.black);
+	}
+
+}
