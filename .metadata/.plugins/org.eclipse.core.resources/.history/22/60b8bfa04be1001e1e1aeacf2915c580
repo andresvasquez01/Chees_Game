@@ -1,0 +1,42 @@
+package controlador;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+
+public class ServerSocket {
+    private ServerSocket serverSocket;
+    private Socket clientSocket;
+
+    public ServerSocket(int port) {
+        try {
+            serverSocket = new ServerSocket(port);
+            System.out.println("Server started and listening on port " + port);
+        } catch (IOException e) {
+            System.err.println("Error creating server socket: " + e.getMessage());
+        }
+    }
+
+    public void acceptConnections() {
+        try {
+            clientSocket = serverSocket.accept();
+            System.out.println("Client connected: " + clientSocket.getInetAddress());
+        } catch (IOException e) {
+            System.err.println("Error accepting client connection: " + e.getMessage());
+        }
+    }
+
+    public void close() {
+        try {
+            if (clientSocket != null) {
+                clientSocket.close();
+            }
+            serverSocket.close();
+        } catch (IOException e) {
+            System.err.println("Error closing server socket: " + e.getMessage());
+        }
+    }
+}
+
+

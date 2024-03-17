@@ -1,0 +1,21 @@
+package controlador;
+
+
+import java.io.IOException;
+import java.net.Socket;
+
+public class SocketClient {
+    private Socket socket;
+    private GameController gameController;
+
+    public SocketClient(GameController gameController, String serverAddress, int serverPort) {
+        this.gameController = gameController;
+        try {
+            socket = new Socket(serverAddress, serverPort);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Métodos para enviar y recibir datos desde el servidor GameController
+}

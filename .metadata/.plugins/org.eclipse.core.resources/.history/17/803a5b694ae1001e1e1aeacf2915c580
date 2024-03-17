@@ -1,0 +1,72 @@
+package controlador;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class ServerSocket {
+    private ServerSocket serverSocket;
+    private Socket clientSocket;
+    private PrintWriter out;
+    private BufferedReader in;
+    private int port;
+
+    public ServerSocket(int port) {
+        this.port = port;
+    }
+
+    public void start() throws IOException {
+        serverSocket = new ServerSocket(port);
+        System.out.println("Server started. Waiting for clients...");
+
+        clientSocket = serverSocket.accept();
+        System.out.println("Client connected.");
+
+        out = new PrintWriter(clientSocket.getOutputStream(), true);
+        in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+
+        String inputLine;
+        while ((inputLine = in.readLine()) != null) {
+            System.out.println("Received move from client: " + inputLine);
+            // Aquí puedes agregar la lógica para procesar el movimiento recibido
+            // y enviar una respuesta al cliente si es necesario.
+        }
+    }
+
+    public void stop() throws IOException {
+        if (serverSocket != null) {
+            serverSocket.close();
+        }
+        if (clientSocket != null) {
+            clientSocket.close();
+        }
+        if (out != null) {
+            out.close();
+        }
+        if (in != null) {
+            in.close();
+        }
+    }
+
+    public static void main(String[] args) {
+        int port = 12345; // Puerto en el que escuchará el servidor
+        ServerSocket server = new ServerSocket(port);
+        try {
+            server.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                server.stop();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+}
+

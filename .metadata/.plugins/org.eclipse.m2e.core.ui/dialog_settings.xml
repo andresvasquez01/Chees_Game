@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="B:\andre\Documentos\Proyectos 2\Chees_Game"/>
+			<item value="B:\andre\Documentos\Proyectos 2\ChezzzWeb"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MicroProjectWizardPage">
+		<list key="package">
+			<item value="com.zzz.Chezzz"/>
+		</list>
+		<list key="groupId">
+			<item value="com.zzz"/>
+		</list>
+		<list key="artifactId">
+			<item value="Chezzz"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="1.0.0-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MicroSettingsWizardPage">
+		<list key="contextRoot">
+			<item value="/"/>
+		</list>
+	</section>
+</section>
