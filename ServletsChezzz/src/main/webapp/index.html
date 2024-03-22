@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Board</title>
+    <style>
+        .square {
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            border: 1px solid black;
+        }
+
+        .piece {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="board">
+        <!-- Fichas blancas -->
+        <img src="Model/Piece/w-rook.png" class="piece" style="top: 0; left: 0;">
+        <img src="Model/Piece/w-knight.png" class="piece" style="top: 0; left: 60px;">
+        <img src="Model/Piece/w-bishop.png" class="piece" style="top: 0; left: 120px;">
+        <img src="Model/Piece/w-queen.png" class="piece" style="top: 0; left: 180px;">
+        <img src="Model/Piece/w-king.png" class="piece" style="top: 0; left: 240px;">
+        <img src="Model/Piece/w-bishop.png" class="piece" style="top: 0; left: 300px;">
+        <img src="Model/Piece/w-knight.png" class="piece" style="top: 0; left: 360px;">
+        <img src="Model/Piece/w-rook.png" class="piece" style="top: 0; left: 420px;">
+        <!-- Peones blancos -->
+        <img src="Model/Piece/w-pawn.png" class="piece" style="top: 60px; left: 0;">
+        <img src="Model/Piece/w-pawn.png" class="piece" style="top: 60px; left: 60px;">
+        <img src="Model/Piece/w-pawn.png" class="piece" style="top: 60px; left: 120px;">
+        <img src="Model/Piece/w-pawn.png" class="piece" style="top: 60px; left: 180px;">
+        <img src="Model/Piece/w-pawn.png" class="piece" style="top: 60px; left: 240px;">
+        <img src="Model/Piece/w-pawn.png" class="piece" style="top: 60px; left: 300px;">
+        <img src="Model/Piece/w-pawn.png" class="piece" style="top: 60px; left: 360px;">
+        <img src="Model/Piece/w-pawn.png" class="piece" style="top: 60px; left: 420px;">
+
+        <!-- Fichas negras -->
+        <img src="Model/Piece/b-rook.png" class="piece" style="top: 420px; left: 0;">
+        <img src="Model/Piece/b-knight.png" class="piece" style="top: 420px; left: 60px;">
+        <img src="Model/Piece/b-bishop.png" class="piece" style="top: 420px; left: 120px;">
+        <img src="Model/Piece/b-queen.png" class="piece" style="top: 420px; left: 180px;">
+        <img src="Model/Piece/b-king.png" class="piece" style="top: 420px; left: 240px;">
+        <img src="Model/Piece/b-bishop.png" class="piece" style="top: 420px; left: 300px;">
+        <img src="Model/Piece/b-knight.png" class="piece" style="top: 420px; left: 360px;">
+        <img src="Model/Piece/b-rook.png" class="piece" style="top: 420px; left: 420px;">
+        <!-- Peones negros -->
+        <img src="Model/Piece/b-pawn.png" class="piece" style="top: 360px; left: 0;">
+        <img src="Model/Piece/b-pawn.png" class="piece" style="top: 360px; left: 60px;">
+        <img src="Model/Piece/b-pawn.png" class="piece" style="top: 360px; left: 120px;">
+        <img src="Model/Piece/b-pawn.png" class="piece" style="top: 360px; left: 180px;">
+        <img src="Model/Piece/b-pawn.png" class="piece" style="top: 360px; left: 240px;">
+        <img src="Model/Piece/b-pawn.png" class="piece" style="top: 360px; left: 300px;">
+        <img src="Model/Piece/b-pawn.png" class="piece" style="top: 360px; left: 360px;">
+        <img src="Model/Piece/b-pawn.png" class="piece" style="top: 360px; left: 420px;">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="myscript.js"></script>
+</body>
+</html>
